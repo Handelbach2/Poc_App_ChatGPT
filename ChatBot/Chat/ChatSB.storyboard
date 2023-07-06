@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--ChatVC-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController storyboardIdentifier="chatSB" id="Y6W-OH-hqX" customClass="ChatVC" customModule="ChatBot" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="pO9-HH-mxl">
+                                <rect key="frame" x="0.0" y="79" width="393" height="674.66666666666663"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dKB-PY-PyD">
+                                <rect key="frame" x="0.0" y="753.66666666666663" width="393" height="54.333333333333371"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lA1-aH-IMu">
+                                        <rect key="frame" x="332.33333333333331" y="10" width="50.666666666666686" height="34.333333333333336"/>
+                                        <color key="tintColor" red="0.62264473610000004" green="0.69437636400000002" blue="0.88558351150000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" image="paperplane" catalog="system"/>
+                                        <connections>
+                                            <action selector="sendActBtn:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="8Y5-6W-dCh"/>
+                                        </connections>
+                                    </button>
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cje-pU-C9c">
+                                        <rect key="frame" x="20" y="10" width="302.33333333333331" height="34.333333333333336"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="cje-pU-C9c" firstAttribute="top" secondItem="dKB-PY-PyD" secondAttribute="top" constant="10" id="21n-ng-wMz"/>
+                                    <constraint firstItem="cje-pU-C9c" firstAttribute="leading" secondItem="dKB-PY-PyD" secondAttribute="leading" constant="20" id="80X-P1-YC3"/>
+                                    <constraint firstAttribute="trailing" secondItem="lA1-aH-IMu" secondAttribute="trailing" constant="10" id="8w6-fZ-VSg"/>
+                                    <constraint firstItem="lA1-aH-IMu" firstAttribute="leading" secondItem="cje-pU-C9c" secondAttribute="trailing" constant="10" id="OiY-DU-0JV"/>
+                                    <constraint firstAttribute="bottom" secondItem="lA1-aH-IMu" secondAttribute="bottom" constant="10" id="f6T-36-EPf"/>
+                                    <constraint firstAttribute="bottom" secondItem="cje-pU-C9c" secondAttribute="bottom" constant="10" id="lar-CU-kRe"/>
+                                    <constraint firstItem="lA1-aH-IMu" firstAttribute="top" secondItem="dKB-PY-PyD" secondAttribute="top" constant="10" id="waf-D0-jUX"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="pO9-HH-mxl" secondAttribute="trailing" id="Jv5-4u-FXX"/>
+                            <constraint firstItem="dKB-PY-PyD" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="MI0-Zw-e9z"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="dKB-PY-PyD" secondAttribute="bottom" constant="10" id="NFr-m8-Oay"/>
+                            <constraint firstItem="dKB-PY-PyD" firstAttribute="top" secondItem="pO9-HH-mxl" secondAttribute="bottom" id="Pi4-fY-Icn"/>
+                            <constraint firstItem="pO9-HH-mxl" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="20" id="V7e-7d-RX4"/>
+                            <constraint firstItem="pO9-HH-mxl" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="uWE-Lq-94G"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="dKB-PY-PyD" secondAttribute="trailing" id="z58-IL-zh7"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="chatInput" destination="cje-pU-C9c" id="dCQ-OL-sPp"/>
+                        <outlet property="stackBottomConstraint" destination="NFr-m8-Oay" id="LX2-SD-2P0"/>
+                        <outlet property="tableView" destination="pO9-HH-mxl" id="Lee-i0-eLP"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="135.1145038167939" y="4.9295774647887329"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="paperplane" catalog="system" width="128" height="119"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
